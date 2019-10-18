@@ -1,5 +1,7 @@
 /images
 /css/*.css
 *.html
+/css/main.css.map
+/css/main.css
 
 
