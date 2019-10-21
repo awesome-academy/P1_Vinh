@@ -1,0 +1,134 @@
+@mixin display($ffl, $align-items, $jus-content) {
+    display: flex;
+    flex-flow: $ffl wrap;
+    align-items: $align-items;
+    justify-content: $jus-content;
+}
+
+$cl-primary: #e6e6e6bf;
+
+%title {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 30rem;
+}
+
+%title-n {
+    left: 50%;
+    transform: translate(-5%, -145%);
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'AdobeInvisFont', 'MyriadPro-Regular', 'TimesNewRomanPSMT';
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.main {
+    max-width: 250rem;
+}
+
+.container {
+    max-width: 98rem;
+    margin: 0 auto;
+}
+
+.header {
+    height: 47rem;
+    background-image: url('../images/slide-1-2050x898.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__navbar-top {
+        height: 3.3rem;
+        background: #b1d5e614;
+        line-height: 3.1rem;
+
+        &__main-navbar {
+            @include display(row, center, space-between);
+
+            &__narvar {
+                @include display(row, center, flex-start);
+
+                &__items {
+                    list-style: none;
+
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+
+                    & a {
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                        color: #fff;
+
+                        &:hover {
+                            text-decoration: underline;
+                            color: #e5ae42;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__search {
+            color: #b4bec3;
+            font-size: 1.2rem;
+
+            &>span {
+                &>input[type='text'] {
+                    background: #ffffff00;
+                    border: none;
+                    outline: none;
+                    margin-left: 1rem;
+
+                    &:focus {
+                        color: #b4bec3;
+                        font-style: italic;
+                        font-weight: lighter;
+                    }
+
+                    &::placeholder {
+                        font-style: italic;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__title {
+        color: $cl-primary;
+        position: absolute;
+        top: 50%;
+        @extend %title;
+
+        &>span {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+    }
+
+    &__title-n {
+        color: $cl-primary;
+        position: absolute;
+        top: 50%;
+        @extend %title-n;
+    }
+}

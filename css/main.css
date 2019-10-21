@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "AdobeInvisFont", "MyriadPro-Regular", "TimesNewRomanPSMT";
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.main {
+  max-width: 250rem;
+}
+
+.container {
+  max-width: 98rem;
+  margin: 0 auto;
+}
+
+.header {
+  height: 47rem;
+  background-image: url("../images/slide-1-2050x898.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header__navbar-top {
+  height: 3.3rem;
+  background: #b1d5e614;
+  line-height: 3.1rem;
+}
+.header__navbar-top__main-navbar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar-top__main-navbar__narvar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__navbar-top__main-navbar__narvar__items {
+  list-style: none;
+}
+.header__navbar-top__main-navbar__narvar__items:not(:last-child) {
+  margin-right: 1rem;
+}
+.header__navbar-top__main-navbar__narvar__items a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+.header__navbar-top__main-navbar__narvar__items a:hover {
+  text-decoration: underline;
+  color: #e5ae42;
+}
+.header__navbar-top__search {
+  color: #b4bec3;
+  font-size: 1.2rem;
+}
+.header__navbar-top__search > span > input[type=text] {
+  background: #ffffff00;
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+}
+.header__navbar-top__search > span > input[type=text]:focus {
+  color: #b4bec3;
+  font-style: italic;
+  font-weight: lighter;
+}
+.header__navbar-top__search > span > input[type=text]::placeholder {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.header__title {
+  color: #e6e6e6bf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dancing Script", cursive;
+  font-size: 30rem;
+}
+.header__title > span {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.header__title-n {
+  color: #e6e6e6bf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5%, -145%);
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+}
+
+/*# sourceMappingURL=main.css.map */
