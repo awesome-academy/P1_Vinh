@@ -1,0 +1,13 @@
+mixin list(items)
+  for item in items
+    li.navbar__nav__menu__items
+      a(href="#")= item
+
+nav.navbar
+  div.navbar__nav.container
+    ul.navbar__nav__menu
+      include ../../dbs/__menuDB
+      li.navbar__nav__menu__items
+        a(href="#")
+          img(src="./images/Logo.png", alt="logo")
+      +list(items1)
