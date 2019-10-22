@@ -1,0 +1,44 @@
+mixin list(values)
+  for v in values
+    li
+      a(href="#")= v.toUpperCase()
+
+section.main-footer
+  .footer.container
+    .footer__sponsor
+      img(src="./images/sponsors.png", alt="")
+    div.footer__f
+      div.footer__t
+        div.footer__ti
+          .footer__title THÔNG TIN
+          ul
+            - const values = ["về chúng tôi", "giao hàng", "cảm nghĩ", "lưu trữ"]
+            +list(values)
+        div.footer__ti
+          .footer__title MUA HÀNG
+          ul
+            - const values1 = ["vận chuyển và trả hàng", "mua hàng an toàn", "vận quốc tế", "liên kết", "dịch vụ giảm giá"]
+            +list(values1)
+        div.footer__ti
+          .footer__title GỬI EMAIL
+          p Gửi email cho chúng tôi để được hổ trợ
+          .footer__send-mail
+            input(type="text")
+            button(type="button").footer__button-sm GỬI
+          .footer__icons-sm 
+            span <i class="fab fa-twitter"></i>
+            span <i class="fab fa-google-plus"></i>
+            span <i class="fab fa-linkedin"></i>
+            span <i class="fab fa-facebook"></i>
+        div.footer__ti
+          .footer__title lIÊN HỆ
+          ul
+            li Tầng 4 tòa nhà Hà Nội group Số 442 Đội Cấn, P.Cống Vị, Q.Ba Đình, Hà Nội.
+            li
+              span (04) 6674 2332 - (04) 37868904
+            li
+              span (08) 6680 9686 Suport@bizweb.vn
+      div.footer__b
+        div.footer__copyright Copyright 2008-2019 DKT Technology JSC
+        .footer__icons
+          img(src="./images/icons-footer.png", alt="")

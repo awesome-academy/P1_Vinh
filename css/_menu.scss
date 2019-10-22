@@ -1,0 +1,28 @@
+.navbar{
+  background: #000;
+
+  &__nav{
+    padding: 1rem 0;
+
+    &__menu{
+      @include display(row, center, space-between);
+
+      &__items{
+        &:first-child{
+          & a > img{
+            max-width: 10rem;
+          }
+        }
+        
+        & a{
+          color: $cl-rd;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: #e5ae42;
+          }
+        }
+      }
+    }
+  }
+}
