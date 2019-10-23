@@ -8,6 +8,13 @@
 // variables
 @import 'variables';
 
+// global
+@import 'title';
+@import 'breadcrumb';
+
+// extends
+@import 'extend';
+
 a{
     color: $cl-primary;
     transition: 0.3s;
@@ -64,6 +71,9 @@ a {
     text-decoration: none;
 }
 
+// menu top
+@import 'menuTop';
+
 // header
 @import 'header';
 
@@ -75,3 +85,7 @@ a {
 
 // footer
 @import 'footer';
+
+// PAGES
+// detail
+@import 'detail'

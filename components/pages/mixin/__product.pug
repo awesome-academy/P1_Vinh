@@ -1,0 +1,12 @@
+mixin product(products)
+  for p in products
+    div.product__items
+      div.product__photo
+        img(src=`./images/${p.photo}` alt="")
+      div.product__title= p.title.toUpperCase()
+      div.product__price
+        span.product__price-sale= p.priceSale
+        span  - 
+        span.product__price-not-sale
+          strike= p.priceNotSale
+      button.product__add-to-cart ADD TO CART
