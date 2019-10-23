@@ -1,3 +1,4 @@
+$cl-white: #ffffff;
 $cl-primary: #6b6b6bbf;
 $cl-secondary: #5e5f5f;
 $cl-bg-primary: #e6ae48;
@@ -66,9 +67,17 @@ $h2: 2rem;
   margin-top: 6rem;
 }
 
+%p-1{
+  padding: 1rem;
+}
+
 %title-n {
   left: 50%;
   transform: translate(-5%, -145%);
   font-family: 'Playfair Display', serif;
   font-size: 6rem;
+}
+
+%bd{
+  border: 1px solid $cl-bg-primary;
 }
