@@ -1,0 +1,14 @@
+include ../mixin/__breadcrumb
+include ../mixin/__blogMx
+
+section.main-blog
+  .blog.container
+    +breadcrumb(['Blog'])
+    .main-title-tl
+      h1.main-title-tl__tt.detail__eff--left BLOG
+      .main-title-tl__eff.detail__eff--left
+        img(src="./images/titleleft-dark.png" alt="")
+    .blog__bl
+      include ../../../dbs/__blogDB
+      +blog(news)
+      
