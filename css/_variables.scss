@@ -1,83 +1,40 @@
 $cl-white: #ffffff;
+$cl-black: #000000;
+$cl-red: #9c0000;
 $cl-primary: #6b6b6bbf;
 $cl-secondary: #5e5f5f;
 $cl-bg-primary: #e6ae48;
 $cl-rd: #ccccccbf;
 $w-25p: 25%;
+$w-70p: 70%;
+$w-100: 100%;
+$h-100: 100%;
 $h-25rem: 25rem;
+$w-4rem: 4rem;
+$h-4rem: 4rem;
 $h1: 2.5rem;
 $h2: 2rem;
+$h3: 1.75rem;
+$fs-small: 1.4rem;
 
 %title {
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Dancing Script', cursive; 
+  font-family: 'Dancing Script', cursive;
   font-size: 30rem;
 }
 
 %btn {
   border: none;
-  background: #000; 
+  background: #000;
   color: #fff;
   outline: none;
   padding: 5px 8px;
   cursor: pointer;
   transition: all .3s;
+  height: 27px;
 
   &:hover {
-      background: $cl-bg-primary;
+    background: $cl-bg-primary;
   }
-}
-
-%mt-1 {
-  margin-top: 1rem;
-}
-
-%mr-1 {
-  margin-right: 1rem;
-}
-
-%m-1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-%mt-2 {
-  margin-top: 2rem;
-}
-
-%mb-1 {
-  margin-bottom: 1rem;
-}
-
-%mb-2 {
-  margin-bottom: 2rem;
-}
-
-%mt-3 {
-  margin-top: 3rem;
-}
-
-%m-2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-%mt-6 {
-  margin-top: 6rem;
-}
-
-%p-1{
-  padding: 1rem;
-}
-
-%title-n {
-  left: 50%;
-  transform: translate(-5%, -145%);
-  font-family: 'Playfair Display', serif;
-  font-size: 6rem;
-}
-
-%bd{
-  border: 1px solid $cl-bg-primary;
 }

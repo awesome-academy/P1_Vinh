@@ -1,18 +1,4 @@
-mixin list(items)
-    for item in items
-        li.header__navbar-top__main-navbar__narvar__items
-            a(href="#")= item
-
 header.header
-    nav.header__navbar-top
-        div.header__navbar-top__main-navbar.container
-            ul.header__navbar-top__main-navbar__narvar
-                - const items = ["Tài khoản của tôi", "-", "Trạng thái đơn hàng", "-", "Danh sách ưu thích", "-", "Giỏ hàng", "-", "Đăng nhập", "-", "Đăng ký"]
-                +list(items)
-            div.header__navbar-top__search
-                span |
-                    input(type="text" placeholder="Tìm kiếm ở đây...")
-                    <i class="fas fa-search"></i>
     div.header__title Rượu
         span Since 1980
     div.header__title-n Vang Đỏ
