@@ -240,8 +240,8 @@
   }
 
   &__news-items{
-    max-width: 45%;
     cursor: pointer;
+    flex: 1;
 
     &:not(:last-child){
       margin-right: 3rem;
