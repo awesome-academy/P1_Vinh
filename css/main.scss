@@ -45,6 +45,20 @@ a:hover{
     }
 }
 
+// tag
+.tag{
+    @extend %btn1;
+    @extend %bdrdu;
+    margin: 0 5px 5px 0;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover{
+        background: $cl-bg-primary;
+        color: $cl-black;
+    }
+}
+
 html {
     font-size: 62.5%;
     font-family: 'AdobeInvisFont', 'MyriadPro-Regular', 'TimesNewRomanPSMT';
@@ -95,3 +109,6 @@ a {
 
 // blog
 @import 'blog';
+
+// blog detail
+@import 'blogDetail';
