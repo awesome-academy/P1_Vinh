@@ -1,0 +1,8 @@
+mixin blogDetail(items)
+  for item in items
+    .blog-detail__new-items
+      .blog-detail__ni-photo
+        img(src=`./images/${item.image}` alt="")
+      .blog-detail__ni-info
+        .blog-detail__ni-title= item.title
+        .blog-detail__ni-time= item.time

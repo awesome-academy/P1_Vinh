@@ -6,6 +6,7 @@ $cl-secondary: #5e5f5f;
 $cl-bg-primary: #e6ae48;
 $cl-rd: #ccccccbf;
 $w-25p: 25%;
+$w-30p: 30%;
 $w-70p: 70%;
 $w-100: 100%;
 $h-100: 100%;
@@ -16,25 +17,3 @@ $h1: 2.5rem;
 $h2: 2rem;
 $h3: 1.75rem;
 $fs-small: 1.4rem;
-
-%title {
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Dancing Script', cursive;
-  font-size: 30rem;
-}
-
-%btn {
-  border: none;
-  background: #000;
-  color: #fff;
-  outline: none;
-  padding: 5px 8px;
-  cursor: pointer;
-  transition: all .3s;
-  height: 27px;
-
-  &:hover {
-    background: $cl-bg-primary;
-  }
-}
