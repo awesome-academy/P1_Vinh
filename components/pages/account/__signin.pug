@@ -1,0 +1,24 @@
+include ../mixin/__breadcrumb
+
+section.main-signin
+  .signin.container
+    +breadcrumb(['Đăng nhập'])
+    .signin__sn
+      .main-title-tl
+        h1.main-title-tl__tt.detail__eff--left ĐĂNG NHẬP
+        .main-title-tl__eff.detail__eff--left
+          img(src="./images/titleleft-dark.png" alt="")
+      .signin__node-sn ĐĂNG KÝ
+    .signin__box-sn
+      .signin__title KHÁCH HÀNG ĐĂNG NHẬP
+      .signin__msg
+        em Nếu đã có tài khoản thì hãy đăng nhập
+      .signin__ip-sn
+        form
+          div
+            input(type="text" placeholder="Tên")
+          div
+            input(type="text" placeholder="Email")
+          div
+            a(href="#") Quên mật khẩu?
+          button.signin__sm-sn  ĐĂNG NHẬP

@@ -1,0 +1,49 @@
+.signin{
+  &__box-sn{
+    @extend %bdgr;
+    @extend %p-6;
+  }
+
+  &__msg{
+    font-size: $fs-small;
+  }
+
+  &__sn{
+    @include display(row, center, space-between);
+    @extend %mb-2;
+  }
+
+  &__ip-sn{
+    & form > div > input{
+      width: 100%;
+    }
+
+    & form textarea{
+      width: 100%;
+    }
+
+    & form div{
+      @extend %mb-2;
+    }
+  }
+
+  &__sm-sn{
+    @extend %btn;
+  }
+
+  &__title, &__msg{
+    @extend %mb-2;
+  }
+
+  &__node-sn{
+    @extend %btn;
+  }
+
+  &__receive-news{
+    @include display(row, center, flex-start);
+
+    & div :first-child{
+      @extend %mr-1;
+    }
+  }
+}
