@@ -1,0 +1,38 @@
+include ../mixin/__breadcrumb
+
+section.main-signin
+  .signin.container
+    +breadcrumb(['Đăng ký'])
+    .signin__sn
+      .main-title-tl
+        h1.main-title-tl__tt.detail__eff--left ĐĂNG KÝ
+        .main-title-tl__eff.detail__eff--left
+          img(src="./images/titleleft-dark.png" alt="")
+      .signin__node-sn ĐĂNG NHẬP
+    .signin__box-su
+      .signin__box-sn
+        .signin__title THÔNG TIN CÁ NHÂN
+        .signin__ip-sn
+          form
+            div
+              input(type="text" placeholder="Họ...")
+            div
+              input(type="text" placeholder="Tên...")
+            div
+              input(type="text" placeholder="Email...")
+            div
+              input(type="password" placeholder="Nhập lại mật khẩu...")
+            div
+              label.signin__receive-news
+                div
+                  input(type="checkbox")
+                div Đăng ký nhận bản tin
+      .signin__box-sn
+        .signin__title THÔNG TIN ĐĂNG NHẬP
+        .signin__ip-sn
+          form
+            div
+              input(type="password" placeholder="Nhập mật khẩu...")
+            div
+              input(type="password" placeholder="Nhập lại mật khẩu...")
+            button.signin__sm-sn  ĐĂNG KÝ
