@@ -1,0 +1,5 @@
+mixin list(products)
+  each wineNameArr, cateName in products
+    .productR__cate-name= cateName
+    for wineName in wineNameArr
+      .productR__wine-name= wineName

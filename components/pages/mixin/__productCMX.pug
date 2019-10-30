@@ -1,0 +1,14 @@
+mixin productC(products)
+  for product in products
+    .productC__proC-items
+      .productC__photo
+        img(src=`./images/${product.photo}` alt=`${product.title}`)
+      .productC__info
+        div
+          h3.productC__title= product.title.toUpperCase()
+        .productC__price= product.price
+        .productC__descriptions= product.description
+        .productC__actions
+          button.productC__add-to-cart ADD TO CART
+          .productC__like Like
+          .productC__compare So sánh 
