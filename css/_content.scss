@@ -278,4 +278,12 @@
   &__customer-position{
     color: $cl-secondary;
   }
+
+  &__customer-photo{
+    max-width: 50%;
+
+    & > img {
+      width: 100%;
+    }
+  }
 }
