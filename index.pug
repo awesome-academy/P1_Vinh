@@ -10,7 +10,7 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Playfair+Display&display=swap")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
     body
-        div.main
+        header.main
             include ./components/commons/__menuTop
             include ./components/commons/__header
         //- menu
@@ -23,5 +23,23 @@ html(lang="en")
             include ./components/pages/home/__gallery
             include ./components/pages/home/__productSellsALot
             include ./components/pages/home/__others
+
+            .main-popup#popupId
+                .popup
+                    .popup__img
+                        img(src="./images/Layer 6@1X.png", alt="")
+                    .popup__send-mail
+                        h1.popup__title Gửi mail
+                        p.popup__descriptions.
+                            Đăng ký ngay Email hôm nay để nhận được thông tin về các sự kiện,
+                            các chương trình giảm giá của chúng tôi sớm nhất!
+                        .popup__f-sm
+                            input(type="text")
+                            button.popup__sm-b GỬI MAIL
+                    .popup__close#removePopupId
+                        i(class="fas fa-times")
+            
+            script
+                include popup.js
         //- footer
         include ./components/commons/__footer

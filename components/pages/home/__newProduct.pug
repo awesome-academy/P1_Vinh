@@ -8,6 +8,13 @@ section.new-product
         img(src="./images/title-dark.png", alt="")
     div.product__pro
       include ../../../dbs/__newProductsDB
-
-      +product(products)
+      input(type="radio" name="r" id="r1" checked)
+      input(type="radio" name="r" id="r2")
+      .product__box-pro1
+        +product(products)
+      .product__box-pro2
+        +product(products11)
+      .product__box-arrow
+        label(for="r1").product__sl-arrow-l &#8592;
+        label(for="r2").product__sl-arrow-r &#8594;
     
