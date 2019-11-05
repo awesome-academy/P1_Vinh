@@ -1,0 +1,40 @@
+include ../mixin/__breadcrumb
+
+mixin listCart(items)
+  for item in items
+    tr
+      td.cart__photo
+        img(src=`./images/${item.photo}`, alt=`${item.name}`)
+      td= item.name.toUpperCase()
+      td= item.price
+      td= item.amount
+      td= item.total
+      td
+        i(class="far fa-trash-alt")
+
+section.main-cart
+  .cart.container
+    +breadcrumb(['Sản phẩm', "Giỏ hàng"])
+    .main-title-tl
+      h1.main-title-tl__tt.detail__eff--left GIỎ HÀNG
+      .main-title-tl__eff.detail__eff--left
+        img(src="./images/titleleft-dark.png" alt="")
+    .cart__b-cart
+      table
+        thead
+          tr
+            th ẢNH
+            th TÊN SẢN PHẨM
+            th GIÁ
+            th SỐ LƯỢNG
+            th TỔNG SỐ
+            th XÓA
+        tbody
+          include ../../../dbs/__cartDB
+          +listCart(cart)
+    .cart__actions
+      button Tiếp tục mua hàng
+      button Xóa
+      button Cập nhật
+    
+          

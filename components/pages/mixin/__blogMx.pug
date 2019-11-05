@@ -3,6 +3,9 @@ mixin blog(news)
     .others__news-items
       .others__news-photo
         img(src=`./images/${item.photo}` alt="")
+        div.others__layer
+        div.others__icon-b
+          img(src="./images/blog-icon.png", alt="")
       .others__news-title= item.title
       .others__news-time= item.time
       .others__news-descriptions= item.descriptions
