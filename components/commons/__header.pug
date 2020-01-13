@@ -1,4 +1,26 @@
+mixin list(text)
+    li.header__navbar-top__main-navbar__narvar__items
+       a(href="#")= text
+
 header.header
+    nav.header__navbar-top
+        div.header__navbar-top__main-navbar.container
+            ul.header__navbar-top__main-navbar__narvar
+                +list("Tài khoản của tôi")
+                +list("-")
+                +list("Trạng thái đơn hàng")
+                +list("-")
+                +list("Danh sách ưu thích")
+                +list("-")
+                +list("Giỏ hàng")
+                +list("-")
+                +list("Đăng nhập")
+                +list("-")
+                +list("Đăng ký")
+            div.header__navbar-top__search
+                span |
+                    input(type="text" placeholder="Tìm kiếm ở đây...")
+                    <i class="fas fa-search"></i>
     div.header__title Rượu
         span Since 1980
     div.header__title-n Vang Đỏ
