@@ -1,0 +1,30 @@
+include ../mixin/__blogMx
+
+section.main-others
+  .others.container
+    .others__blog
+      .main-title-tl
+        .main-title-tl__tt TIN TỨC & BLOG
+        .main-title-tl__eff
+          img(src="./images/title-dark.png" alt="")
+      .others__news
+        include ../../../dbs/__otherNewsDB
+        
+        +blog(news)
+    .others__customer
+      .main-title-tl
+        .main-title-tl__tt KHÁCH HÀNG
+        .main-title-tl__eff
+          img(src="./images/title-dark.png" alt="")
+      .others__customer-cus
+        .others__customer-kt
+          img(src="./images/kt.png", alt="")
+        .others__customer-descriptions A beam of pure blackberry runs through this otherwise dense and focused red.
+          br
+          a(href="") Read more
+        .others__customer-photo
+          img(src="./images/customer.jpg" alt="")
+        .others__customer-name GIANG LT
+        .others__customer-position
+          i Graphic design
+          

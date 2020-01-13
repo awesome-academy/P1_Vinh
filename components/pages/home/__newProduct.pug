@@ -1,0 +1,13 @@
+include ../mixin/__product
+      
+section.new-product
+  div.product.container
+    div.main-title-tl
+      div.main-title-tl__tt SẢN PHẨM MỚI
+      div.main-title-tl__eff
+        img(src="./images/title-dark.png", alt="")
+    div.product__pro
+      include ../../../dbs/__newProductsDB
+
+      +product(products)
+    

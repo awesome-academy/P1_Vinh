@@ -5,7 +5,27 @@
     justify-content: $jus-content;
 }
 
-*{
+// variables
+@import 'variables';
+
+// global
+@import 'title';
+@import 'breadcrumb';
+
+// extends
+@import 'extend';
+
+a {
+    color: $cl-primary;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: $cl-secondary;
+    text-decoration: underline;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

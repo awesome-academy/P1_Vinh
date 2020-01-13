@@ -1,0 +1,6 @@
+mixin breadcrumb([...args])
+  .breadcrumb
+      span= "Trang chủ"
+      for v, index in args
+        span= " / "
+        span= v

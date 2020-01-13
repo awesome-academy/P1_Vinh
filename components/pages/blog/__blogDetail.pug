@@ -1,0 +1,34 @@
+include ../mixin/__breadcrumb
+include ../mixin/__blogMx
+include ../mixin/__blogDetail
+include ../mixin/__tag
+
+section.main-blog-detail
+  .blog-detail.container
+    +breadcrumb(['Blog', "Vang Thăng Long Classic"])
+    .main-title-tl
+      h1.main-title-tl__tt.detail__eff--left BLOG
+      .main-title-tl__eff.detail__eff--left
+        img(src="./images/titleleft-dark.png" alt="")
+    .blog-detail__dt
+      .blog-detail__aside
+        .blog-detail__news
+          .blog-detail__title BÀI VIẾT MỚI NHẤT
+          include ../../../dbs/__news
+          +blogDetail(blogIts)
+        .blog-detail__tags
+          .blog-detail__title TAGS
+          .blog-detail__tags
+            include ../../../dbs/__tagDB
+            +tag(tags)
+      .blog-detail__content
+        include ../../../dbs/__blogDetailDB
+        +blog(news)
+        .blog-detail__comment
+          .blog-detail__cm-title ĐÓNG GÓP Ý KIẾN
+          form
+            input(type="text" placeholder="Tên")
+            input(type="text" placeholder="Email")
+            textarea(name="" cols="30" rows="10" placeholder="Đóng góp ý kiến...")
+            button.blog-detail__send  GỬI Ý KIẾN
+            

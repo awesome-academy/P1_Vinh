@@ -1,0 +1,101 @@
+include ../mixin/__breadcrumb
+
+include ../mixin/__product
+
+mixin photoDetail(photos)
+  for photo in photos
+    div.detail__photo
+      img(src=`./images/${photo}.jpg` alt="")
+
+section.main-detail
+  .detail.container
+    +breadcrumb(['Sản phẩm', 'Rượu vang đỏ'])
+    .detail__pro
+      .detail__pro-photos
+        .detail__list-photos
+          .detail__ar-top
+            <i class="fas fa-arrow-up"></i>
+          .detail__ar-bottom
+            <i class="fas fa-arrow-down"></i>
+          include ../../../dbs/__photoDetail
+          +photoDetail(photos)
+        .detail__main-photo
+          img(src="./images/10.jpg" alt="")
+      .detail__pro-info
+        div.main-title-tl
+          h1.main-title-tl__tt.detail__eff--left RƯỢU NHO NĂM 1987
+          div.main-title-tl__eff.detail__eff--left
+            img(src="./images/titleleft-dark.png" alt="")
+        .detail__pro-price.highlight__high__pro__info__price 330.000
+        .detail__pro-reviews
+          span.fa.fa-star.detail__star-checked
+          span.fa.fa-star.detail__star-checked
+          span.fa.fa-star.detail__star-checked
+          span.fa.fa-star
+          span.fa.fa-star
+        .detail__pro-colors
+          .title1 màu sắc
+          .detail__pro-color-dt
+            .detail__cl-orange
+            .detail__cl-black
+            .detail__cl-red
+        .detail__pro-size
+          .title1 kích cỡ
+          .detail__pro-select
+            select
+              option(value="Loại to") Loại to
+              option(value="Loại vừa") Loại vừa
+              option(value="Loại nhỏ") Loại nhỏ
+        .detail__pro-amount
+          .title1 số lượng
+          .detail__amount
+            input(type="number")
+            button.detail__pro-add-to-cart ADD TO CART
+        .detail__pro-action
+          span
+            i.fas.fa-heart
+            | Yêu thích
+          span
+            i.fas.fa-signal
+            | So sánh
+          span
+            i.fas.fa-envelope
+            | Email
+        .detail__pro-descriptions
+          .title1 mô tả
+          p áđàhádhàiúydkàhsdakjfyhksạdfjkdsahfmns sạkfhsdakjfsdhfkj
+        .detail__pro-socials
+
+    .detail__more-info
+      .tabs
+        .tab
+          input#checkbox1.checkboxtab(name='checkbox-tabs-group' type='radio' checked='')
+          label(for='checkbox1') ĐẶC ĐIỂM NỔI BẬT
+          .content.
+            A beam of pure blackberry runs through this otherwise dense and focused red.
+            A beam of pure blackberry runs through this otherwise dense and focused red.
+        .tab
+          input#checkbox2.checkboxtab(name='checkbox-tabs-group' type='radio')
+          label(for='checkbox2') THÔNG TIN
+          .content.
+            Offers fine, minerally length. Sangiovese and Merlot.
+            Best from 2021 through 2032”A beam of pure blackberry runs through this otherwise dense and focused red.
+        .tab
+          input#checkbox3.checkboxtab(name='checkbox-tabs-group' type='radio')
+          label(for='checkbox3') ĐÁNH GIÁ
+          .content.
+            Best from 2021 through 2032”A beam of pure blackberry runs through this otherwise dense and focused red. Shows elegance, with balance and complexity, but needs time to integrate and reveal all its facets.
+            Offers fine, minerally length. Sangiovese and Merlot. Best from 2021 through 2032”
+      .detail__more-photo
+        img(src="./images/gallery/Layer 23@1X.png" alt="")
+
+    section.new-product
+      div.product.container
+        div.main-title-tl
+          div.main-title-tl__tt SẢN PHẨM LIÊN QUAN
+          div.main-title-tl__eff
+            img(src="./images/title-dark.png" alt="")
+        div.product__pro
+          include ../../../dbs/__newProductsDB
+
+          +product(products)

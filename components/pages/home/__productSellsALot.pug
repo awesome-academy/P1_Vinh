@@ -1,0 +1,31 @@
+mixin productSellsAlot(products)
+  for p in products
+    div.product__items
+      div.product__photo
+        img(src=`./images/${p.photo}` alt="")
+      div.product__title= p.title.toUpperCase()
+      div.product__price
+        span.product__price-sale= p.priceSale
+        span  - 
+        span.product__price-not-sale
+          strike= p.priceNotSale
+      button.product__add-to-cart ADD TO CART
+      
+section.new-product
+  div.product.container
+    div.main-title-tl
+      div.main-title-tl__tt SẢN PHẨM BÁN CHẠY
+      div.main-title-tl__eff
+        img(src="./images/title-dark.png", alt="")
+    div.product__pro
+      -
+        const products1 = 
+        [
+          {title: "rượu vang đà lạt", priceSale: "370.000", priceNotSale: "450.000", status: "Sale", photo: "10.jpg"},
+          {title: "rượu vang đà lạt", priceSale: "370.000", priceNotSale: "450.000", status: "New", photo: "10.jpg"},
+          {title: "rượu vang đà lạt", priceSale: "370.000", priceNotSale: "450.000", status: "Hot", photo: "10.jpg"},
+          {title: "rượu vang đà lạt", priceSale: "370.000", priceNotSale: "450.000", status: "Sale", photo: "10.jpg"}
+        ]
+
+      +productSellsAlot(products1)
+      

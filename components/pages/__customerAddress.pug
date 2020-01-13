@@ -1,0 +1,41 @@
+include ./mixin/__breadcrumb
+mixin fList(items)
+  for item in items
+    div
+      input(type="text" placeholder=`${item}`)
+
+section.main-address
+  .address.container
+    +breadcrumb(['Địa chỉ'])
+    div.main-title-tl
+      h1.main-title-tl__tt.detail__eff--left ĐỊA CHỈ
+      .main-title-tl__eff.detail__eff--left
+        img(src="./images/titleleft-dark.png" alt="")
+    .address__ad
+      .address__of-y
+        .address__of-y-tt ĐỊA CHỈ CỦA BẠN
+        form
+          include ../../dbs/__formListDB
+          +fList(fList)
+          div
+            div
+              label.address__cb-default
+                input(type="checkbox")
+                div Đặc làm địa chỉ mặc định?
+          div.address__of-y-sm
+            button.address__of-y-edit  Chỉnh sửa địa chỉ
+            button.address__of-y-delete Xóa
+      .address__of-add
+        .address__of-add-tt
+          a(href="#") Thêm địa chỉ
+        form
+          +fList(fList)
+          div
+            div
+              label.address__cb-default
+                input(type="checkbox")
+                div Đặc làm địa chỉ mặc định?
+          div.address__of-add-sm
+            button.address__of-add-update  Cập nhật địa chỉ
+            button.address__of-add-exit  Thoát
+          

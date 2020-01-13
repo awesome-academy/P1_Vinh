@@ -1,0 +1,24 @@
+mixin list(mgItems1, mgItems2)
+  for mgItem1 in mgItems1
+    li.navbar__nav__menu__items
+      a(href="#")= mgItem1
+      if (mgItem1 === "RƯỢU VANG ĐỎ" || mgItem1 === "RƯỢU TRẮNG") 
+        ul.navbar__nav__menu__second
+          div.navbar__nav__menu__second-b
+            each mgItem2, key in mgItems2
+              div.navbar__nav__menu__second-b-items
+                div.navbar__nav__menu__title-second-b-items= key
+                for v in mgItem2
+                  li.navbar__nav__menu__sc-items
+                    a(href="#")= v
+            .navbar__nav__menu__second-b-img
+              img(src="./images/Layer 41@1X.png", alt="")
+
+nav.navbar
+  div.navbar__nav.container
+    ul.navbar__nav__menu
+      include ../../dbs/__menuDB
+      li.navbar__nav__menu__items
+        a(href="#")
+          img(src="./images/Logo.png" alt="logo")
+      +list(mgItems1, mgItems2)

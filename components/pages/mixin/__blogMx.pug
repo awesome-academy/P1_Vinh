@@ -1,0 +1,9 @@
+mixin blog(news)
+  for item in news
+    .others__news-items
+      .others__news-photo
+        img(src=`./images/${item.photo}` alt="")
+      .others__news-title= item.title
+      .others__news-time= item.time
+      .others__news-descriptions= item.descriptions
+      a(href="").others__read-more Read more

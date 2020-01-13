@@ -1,0 +1,14 @@
+mixin gallery(galleries)
+  for item in galleries
+    div(style={
+      'background-image': `url('./images/gallery/${item}')`,
+      'background-position': 'left',
+      'background-repeat': 'no-repeat',
+      'background-size': 'cover'
+    }).gallery__items  
+
+section.main-gallery
+  div.gallery
+    include ../../../dbs/__galleryDB
+    +gallery(galleries)
+    
